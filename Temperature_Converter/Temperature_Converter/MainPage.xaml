@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="FinalUWPAjayDesai.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FinalUWPAjayDesai"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Center" BorderBrush="White" BorderThickness="2,2,2,2" Loaded="Page_Loaded">
+    <Page.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFFF0046" Offset="0.038"/>
+            <GradientStop Color="#FF5800FF" Offset="0.889"/>
+        </LinearGradientBrush>
+    </Page.Background>
+    <StackPanel Orientation="Vertical" Padding="5,0,5,0" Background="{ThemeResource SystemControlAcrylicWindowBrush}" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="5,5,5,5">
+        <TextBlock x:Name="tbTitle" Text="Temperature Conversion" FontWeight="Bold" FontFamily="Algerian" FontSize="36" FontStretch="Normal" HorizontalAlignment="Center" VerticalAlignment="Stretch" Padding="0,12,0,0" OpticalMarginAlignment="None" TextWrapping="Wrap" RequestedTheme="Default" Margin="0,10,0,0" Foreground="Red"></TextBlock>
+
+        <StackPanel Orientation="Horizontal" Padding="12,10,12,30" HorizontalAlignment="Stretch" BorderBrush="#FF00F7FF" BorderThickness="0,2,0,0">
+            <RadioButton x:Name="rbCtoF" Content="Celsius to Fahrenheit" GroupName="rbScale" IsChecked="True" Margin="35,20,20,20" FontFamily="Arial" FontSize="18" HorizontalAlignment="Left" Padding="10,6,5,0"></RadioButton>
+            <RadioButton x:Name="rbFtoC" Content="Fahrenheit to Celsius" GroupName="rbScale" Margin="35,20,20,20" FontFamily="Arial" HorizontalAlignment="Left" FontSize="18" Padding="10,6,5,0"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Padding="5,30,5,50" Margin="0,0,0,5" BorderThickness="0,1,0,1" BorderBrush="#C000F7FF">
+            <TextBlock Text="Enter Temperature: " TextWrapping="Wrap" Padding="0,0,5,0" VerticalAlignment="Center" FontSize="20" FontFamily="Arial"/>
+            <TextBox x:Name="txtTemp" TextWrapping="Wrap" Width="250" Margin="5,0,10,0" FontSize="18" Padding="10,5,6,6" PlaceholderText="Enter Temperature..." BorderBrush="White" />
+            <Button x:Name="btnConvert" Content="Convert" Click="btnConvert_Click" Padding="20,8,20,8" FontSize="18" Foreground="White" BorderBrush="White" Margin="0,0,15,0" FontFamily="Calibri Light" FontWeight="Medium"/>
+        </StackPanel>
+        <TextBlock x:Name="tbTemp" Text="--" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Algerian" FontSize="36"/>
+    </StackPanel>
+
+</Page>
